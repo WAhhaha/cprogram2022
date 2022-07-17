@@ -1,9 +1,15 @@
 #include<stdio.h>
 
-int main(){
-    printf("hello GitHub!\n");
-    printf("This is my third attempt.\n");
+int fib(int n){
+    if(n == 1 || n == 2)
+        return 1;
+    return fib(n - 1) + fib(n - 2);
+}
 
-    for(int i = 0; i < 10; i++)
-        printf("%d\n", i);
+int main(){
+    int n = 0;
+    scanf("%d", &n);
+    
+    printf("fibonacci : %d\n", fib(n));
+
 }
